@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Atendimento Rick and Morty</title>
+    <script type="text/javascript" src="./script.js" defer=""></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="app">
+      <header>
+        <h1>Central de Atendimento Rick and Morty</h1>
+        <p>Fila FIFO com personagens aleatórios da API oficial</p>
+      </header>
+
+      <section class="panel">
+        <h2>Personagem em atendimento</h2>
+        <div class="current-card" id="currentCard">
+          <img id="currentImage" alt="Personagem atual">
+          <div class="current-info">
+            <h3 id="currentName">Nenhum personagem na fila</h3>
+            <div>
+              <span id="currentSpecies" class="badge">Espécie: -</span>
+              <span id="currentStatus" class="badge">Status: -</span>
+            </div>
+            <p id="currentDescription" style="color: var(--muted); margin-bottom: 0;">
+              Adicione personagens à fila para começar o atendimento.
+            </p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="btn-add" id="addBtn">Adicionar personagem aleatório</button>
+          <button class="btn-serve" id="serveBtn">Atender</button>
+          <button class="btn-clear" id="clearBtn">Limpar fila</button>
+        </div>
+
+        <div class="served-box" id="servedBox">Último atendido: nenhum</div>
+      </section>
+
+      <section class="panel">
+        <h2>Sala de espera</h2>
+        <div id="queueList" class="queue-list"></div>
+      </section>
+    </div>
+
+    <audio id="serveSound" preload="auto">
+      <source src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" type="audio/ogg">
+    </audio>
+
+  </body>
+
+</html>
